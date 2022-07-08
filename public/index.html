@@ -25,10 +25,43 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="form">
+    <h1>Donate to Luri</h1>
+    <div class="form">
+    <label> Nickname </label>
+    <input type="text" id="userId" /><br />
+
+    <input type="radio" name="coinType" value="SOL" />SOL<br />
+    <input type="radio" name="coinType" value="CHB" />CHB <br />
+
+    <label> Amount of Donation </label>
+    <input
+      type="number"
+      id="coinAmount"
+      name="coinAmount"
+      min="1"
+      max="99999999"
+      step="1"
+      value="10"
+    />
+    <br />
+
+    <label>Text Content</label><br/>
+    <textarea
+      cols="40"
+      rows="10"
+      maxlength="60"
+      id="userMsg"
+    /></textarea><br />
+
+    <button type="button" id="donationButton">Send</button>
     <div id="root"></div>
+    <script src="index.js"></script>
+    </div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
